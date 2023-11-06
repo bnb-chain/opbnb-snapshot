@@ -1,0 +1,22 @@
+name: auto update snapshot links
+
+on:
+  # Add a schedule to run the job every day at 0:00 UTC
+  schedule:
+    - cron: "0 0 * * *"
+
+  # Allow running this workflow manually
+  workflow_dispatch:
+
+jobs:
+  auto_update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+      - uses: denoland/setup-deno@v1
+        with:
+          deno-version: v1.x   
+      - run: deno run -A auto_update.ts
+      - uses: stefanzweifel/git-auto-commit-action@v5
