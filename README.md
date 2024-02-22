@@ -5,6 +5,7 @@
 Snapshot download link:
 ### *Mainnet*
 https://tf-bnbchain-prod-opbnb-mainnet-snapshot-s3-ap-northeast-1.s3.ap-northeast-1.amazonaws.com/geth-20240220.tar.gz
+（this is a pruned snapshot, note that the state data has been erased before the block height 16319074. The archive snapshot will be published once ready）
 
 ### *Testnet*
 https://tf-nodereal-prod-opbnb-testnet-snapshot-s3-ap.s3.ap-northeast-1.amazonaws.com/geth-20240216.tar.gz
