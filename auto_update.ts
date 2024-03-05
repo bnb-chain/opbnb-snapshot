@@ -1,16 +1,18 @@
 import Template from "https://deno.land/x/template@v0.1.0/mod.ts";
 
 // date format: YYYYMMDD, e.g. 20231102
-function getSnapshotURL(network: "mainnet" | "testnet", date: Date): string {
+function getSnapshotURL(network: "mainnet" | "mainnet_prune" | "testnet", date: Date): string {
   const dateString = date.toISOString().substr(0, 10).replace(/-/g, "");
   if (network === "mainnet") {
     return `https://tf-bnbchain-prod-opbnb-mainnet-snapshot-s3-ap-northeast-1.s3.ap-northeast-1.amazonaws.com/geth-${dateString}.tar.gz`;
+  } else if ((network === "mainnet_prune"))  {
+    return `https://tf-nodereal-prod-opbnb-testnet-snapshot-s3-ap.s3.ap-northeast-1.amazonaws.com/geth-prune-${dateString}.tar.gz`;
   } else {
     return `https://tf-nodereal-prod-opbnb-testnet-snapshot-s3-ap.s3.ap-northeast-1.amazonaws.com/geth-${dateString}.tar.gz`;
   }
 }
 
-async function getLatestSnapshotURL(network: "mainnet" | "testnet") {
+async function getLatestSnapshotURL(network: "mainnet" | "mainnet_prune" | "testnet") {
   const date = new Date();
   for (let i = 0; i < 10; i++) {
     const url = getSnapshotURL(network, date);
@@ -26,9 +28,11 @@ async function getLatestSnapshotURL(network: "mainnet" | "testnet") {
 
 async function main() {
   const mainnetLatestSnapshotURL = await getLatestSnapshotURL("mainnet");
+  const mainnetPruneLatestSnapshotURL = await getLatestSnapshotURL("mainnet_prune");
   const testnetLatestSnapshotURL = await getLatestSnapshotURL("testnet");
   const data = {
     mainnet: mainnetLatestSnapshotURL,
+    mainnetPrune: mainnetPruneLatestSnapshotURL,
     testnet: testnetLatestSnapshotURL,
     updatedAt: new Date().toISOString(),
   };
