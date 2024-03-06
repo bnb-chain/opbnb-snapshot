@@ -6,7 +6,7 @@ function getSnapshotURL(network: "mainnet" | "mainnet_prune" | "testnet", date: 
   if (network === "mainnet") {
     return `https://tf-bnbchain-prod-opbnb-mainnet-snapshot-s3-ap-northeast-1.s3.ap-northeast-1.amazonaws.com/geth-${dateString}.tar.gz`;
   } else if ((network === "mainnet_prune"))  {
-    return `https://tf-nodereal-prod-opbnb-testnet-snapshot-s3-ap.s3.ap-northeast-1.amazonaws.com/geth-prune-${dateString}.tar.gz`;
+    return `https://tf-bnbchain-prod-opbnb-mainnet-snapshot-s3-ap-northeast-1.s3.ap-northeast-1.amazonaws.com/geth-prune-${dateString}.tar.gz`;
   } else {
     return `https://tf-nodereal-prod-opbnb-testnet-snapshot-s3-ap.s3.ap-northeast-1.amazonaws.com/geth-${dateString}.tar.gz`;
   }
