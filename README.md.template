@@ -8,7 +8,7 @@ Snapshot download link:
 {{mainnet}}
 - Pruned:  
 {{mainnetPrune}} 
-（Note that the pruned snapshot has erased state data before block height: 16319074)
+（Note that the pruned snapshot has erased state data before block height: 19598373)
 ### *Testnet*
 - Archived:  
 {{testnet}}
