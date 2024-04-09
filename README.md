@@ -7,7 +7,7 @@ Snapshot download link:
 - Archived:  
 https://tf-bnbchain-prod-opbnb-mainnet-snapshot-s3-ap-northeast-1.s3.ap-northeast-1.amazonaws.com/geth-20240404.tar.gz
 - Pruned:  
-https://tf-bnbchain-prod-opbnb-mainnet-snapshot-s3-ap-northeast-1.s3.ap-northeast-1.amazonaws.com/geth-prune-20240405.tar.gz 
+https://tf-bnbchain-prod-opbnb-mainnet-snapshot-s3-ap-northeast-1.s3.ap-northeast-1.amazonaws.com/geth-prune-20240408.tar.gz 
 （Note that the pruned snapshot has erased state data before block height: 19598373)
 ### *Testnet*
 - Archived:  
