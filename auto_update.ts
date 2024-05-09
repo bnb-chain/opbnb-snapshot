@@ -31,7 +31,7 @@ async function main() {
   const mainnetPruneLatestSnapshotURL = await getLatestSnapshotURL("mainnet_prune");
   const testnetLatestSnapshotURL = await getLatestSnapshotURL("testnet");
   const data = {
-    // mainnet: mainnetLatestSnapshotURL,
+    mainnet: "https://tf-bnbchain-prod-opbnb-mainnet-snapshot-s3-ap-northeast-1.s3.ap-northeast-1.amazonaws.com/geth-20240418.tar.gz",
     mainnetPrune: mainnetPruneLatestSnapshotURL,
     testnet: testnetLatestSnapshotURL,
     updatedAt: new Date().toISOString(),
