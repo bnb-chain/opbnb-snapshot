@@ -27,7 +27,7 @@ async function getLatestSnapshotURL(network: "mainnet" | "mainnet_prune" | "test
 }
 
 async function main() {
-  const mainnetLatestSnapshotURL = await getLatestSnapshotURL("mainnet");
+  // const mainnetLatestSnapshotURL = await getLatestSnapshotURL("mainnet");
   const mainnetPruneLatestSnapshotURL = await getLatestSnapshotURL("mainnet_prune");
   const testnetLatestSnapshotURL = await getLatestSnapshotURL("testnet");
   const data = {
