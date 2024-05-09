@@ -31,7 +31,7 @@ async function main() {
   const mainnetPruneLatestSnapshotURL = await getLatestSnapshotURL("mainnet_prune");
   const testnetLatestSnapshotURL = await getLatestSnapshotURL("testnet");
   const data = {
-    mainnet: mainnetLatestSnapshotURL,
+    // mainnet: mainnetLatestSnapshotURL,
     mainnetPrune: mainnetPruneLatestSnapshotURL,
     testnet: testnetLatestSnapshotURL,
     updatedAt: new Date().toISOString(),
