@@ -4,11 +4,11 @@ import Template from "https://deno.land/x/template@v0.1.0/mod.ts";
 function getSnapshotURL(network: "mainnet" | "mainnet_prune" | "testnet", date: Date): string {
   const dateString = date.toISOString().substr(0, 10).replace(/-/g, "");
   if (network === "mainnet") {
-    return `https://tf-bnbchain-prod-opbnb-mainnet-snapshot-s3-ap-northeast-1.s3.ap-northeast-1.amazonaws.com/geth-${dateString}.tar.gz`;
+    return `https://opbnb-snapshot-mainnet.bnbchain.org/geth-${dateString}.tar.gz`;
   } else if ((network === "mainnet_prune"))  {
-    return `https://tf-bnbchain-prod-opbnb-mainnet-snapshot-s3-ap-northeast-1.s3.ap-northeast-1.amazonaws.com/geth-prune-${dateString}.tar.gz`;
+    return `https://opbnb-snapshot-mainnet.bnbchain.org/geth-prune-${dateString}.tar.gz`;
   } else {
-    return `https://tf-nodereal-prod-opbnb-testnet-snapshot-s3-ap.s3.ap-northeast-1.amazonaws.com/geth-${dateString}.tar.gz`;
+    return `https://opbnb-snapshot-testnet.bnbchain.org/geth-${dateString}.tar.gz`;
   }
 }
 
@@ -31,7 +31,7 @@ async function main() {
   const mainnetPruneLatestSnapshotURL = await getLatestSnapshotURL("mainnet_prune");
   const testnetLatestSnapshotURL = await getLatestSnapshotURL("testnet");
   const data = {
-    mainnet: "https://tf-bnbchain-prod-opbnb-mainnet-snapshot-s3-ap-northeast-1.s3.ap-northeast-1.amazonaws.com/geth-20240418.tar.gz",
+    mainnet: "https://opbnb-snapshot-testnet.bnbchain.org/geth-20240418.tar.gz",
     mainnetPrune: mainnetPruneLatestSnapshotURL,
     testnet: testnetLatestSnapshotURL,
     updatedAt: new Date().toISOString(),
