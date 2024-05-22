@@ -5,7 +5,7 @@
 Snapshot download link:
 ### *Mainnet*
 - Archived:  
-{{mainnet}}
+There is no available archive snapshot at the moment.
 - Pruned:  
 {{mainnetPrune}} 
 （Note that the pruned snapshot has erased state data before block height: 19598373)
