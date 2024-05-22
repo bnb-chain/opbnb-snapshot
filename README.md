@@ -5,7 +5,7 @@
 Snapshot download link:
 ### *Mainnet*
 - Archived:  
-https://opbnb-snapshot-mainnet.bnbchain.org/geth-20240418.tar.gz
+There is no available archive snapshot at the moment.
 - Pruned:  
 https://opbnb-snapshot-mainnet.bnbchain.org/geth-prune-20240521.tar.gz 
 （Note that the pruned snapshot has erased state data before block height: 19598373)
