@@ -1,3 +1,4 @@
+import { Logger } from "ethers/lib/utils";
 import Template from "https://deno.land/x/template@v0.1.0/mod.ts";
 
 // date format: YYYYMMDD, e.g. 20231102
@@ -27,7 +28,7 @@ async function getLatestSnapshotURL(network: "mainnet" | "mainnet_prune" | "main
     }
     date.setDate(date.getDate() - 1);
   }
-  throw new Error("no snapshot found in latest 10 days");
+  throw new Logger("no snapshot found in latest 10 days");
 }
 
 async function main() {
