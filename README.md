@@ -5,7 +5,7 @@
 Snapshot download link:
 ### *Mainnet*
 - Archived:  
-https://opbnb-snapshot-testnet.bnbchain.org/geth-20240418.tar.gz
+https://opbnb-snapshot-mainnet.bnbchain.org/geth-20240418.tar.gz
 - Pruned:  
 https://opbnb-snapshot-mainnet.bnbchain.org/geth-prune-20240521.tar.gz 
 （Note that the pruned snapshot has erased state data before block height: 19598373)
@@ -21,7 +21,7 @@ https://opbnb-snapshot-testnet.bnbchain.org/geth-20240516.tar.gz
 ### Step 1: Download the snapshot and decompress it.
 
 ```bash
-wget -q -O - https://opbnb-snapshot-testnet.bnbchain.org/geth-20240418.tar.gz | tar -xvf -
+wget -q -O - https://tf-bnbchain-prod-opbnb-mainnet-snapshot-s3-ap-northeast-1.s3.ap-northeast-1.amazonaws.com/geth-20231012.tar.gz | tar -xvf -
 ```
 
 ### Step 2: Replace the data.
