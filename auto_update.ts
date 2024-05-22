@@ -27,7 +27,9 @@ async function getLatestSnapshotURL(network: "mainnet" | "mainnet_prune" | "main
     }
     date.setDate(date.getDate() - 1);
   }
-  throw new Error("no snapshot found in latest 10 days");
+  // throw new Error("no snapshot found in latest 10 days");
+  console.warn("no snapshot found in latest 10 days");
+  
 }
 
 async function main() {
