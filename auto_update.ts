@@ -1,4 +1,3 @@
-import { Logger } from "ethers/lib/utils";
 import Template from "https://deno.land/x/template@v0.1.0/mod.ts";
 
 // date format: YYYYMMDD, e.g. 20231102
@@ -28,15 +27,15 @@ async function getLatestSnapshotURL(network: "mainnet" | "mainnet_prune" | "main
     }
     date.setDate(date.getDate() - 1);
   }
-  throw new Logger("no snapshot found in latest 10 days");
+  throw new Error("no snapshot found in latest 10 days");
 }
 
 async function main() {
   // const mainnetLatestSnapshotURL = await getLatestSnapshotURL("mainnet");
-  const mainnetPruneLatestSnapshotURL = await getLatestSnapshotURL("mainnet_prune");
-  const mainnetPbssLatestSnapshotURL = await getLatestSnapshotURL("mainnet_pbss");
   const testnetLatestSnapshotURL = await getLatestSnapshotURL("testnet");
   const testnetPbssLatestSnapshotURL = await getLatestSnapshotURL("testnet_pbss");
+  const mainnetPruneLatestSnapshotURL = await getLatestSnapshotURL("mainnet_prune");
+  const mainnetPbssLatestSnapshotURL = await getLatestSnapshotURL("mainnet_pbss");
   const data = {
     mainnet: "https://opbnb-snapshot-mainnet.bnbchain.org/geth-20240418.tar.gz",
     mainnetPrune: mainnetPruneLatestSnapshotURL,
