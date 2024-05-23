@@ -9,8 +9,6 @@ There is no available archive snapshot at the moment.
 - Pruned:  
 https://opbnb-snapshot-mainnet.bnbchain.org/geth-prune-20240521.tar.gz 
 （Note that the pruned snapshot has erased state data before block height: 19598373)
-- PBSS:
-{{mainnetPbss}} 
 ### *Testnet*
 - Archived:  
 https://opbnb-snapshot-testnet.bnbchain.org/geth-20240516.tar.gz
