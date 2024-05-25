@@ -9,11 +9,13 @@ There is no available archive snapshot at the moment.
 - Pruned:  
 https://opbnb-snapshot-mainnet.bnbchain.org/geth-prune-20240521.tar.gz 
 （Note that the pruned snapshot has erased state data before block height: 19598373)
+- PBSS:
+{{mainnetPbss}} 
 ### *Testnet*
 - Archived:  
-https://opbnb-snapshot-testnet.bnbchain.org/geth-20240516.tar.gz
+https://opbnb-snapshot-testnet.bnbchain.org/geth-20240524.tar.gz
 - PBSS:  
-https://opbnb-snapshot-testnet.bnbchain.org/geth-pbss-20240522.tar.gz
+https://opbnb-snapshot-testnet.bnbchain.org/geth-pbss-20240524.tar.gz
 
 
 > Snapshots are generated and retained on a weekly basis, with each snapshot being stored for a duration of 7 days. Community developer NodeReal is responsible for creating and updating the testnet snapshot regularly.
