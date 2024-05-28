@@ -2,30 +2,50 @@
 
 ## Endpoint
 
-Snapshot download link:
+Snapshots are created and preserved every week,
+and each snapshot is kept for 30 days.
+NodeReal, a community developer, is responsible for regularly creating and updating the snapshots.
+
+At present, we offer snapshots for both the mainnet and testnet networks in path-based state scheme and archived formats.
+It is advisable to utilize the path-based state scheme snapshot for quicker synchronization, improved performance, and reduced storage needs.
+
+For more details about different node type and database scheme, please refer to the [official documentation](https://docs.bnbchain.org/opbnb-docs/docs/tutorials/run-nodes-best-practices/).
+
 ### *Mainnet*
+- Path-Base-State-Scheme(recommand):
+    - url: https://opbnb-snapshot-mainnet.bnbchain.org/geth-pbss-20240525.tar.gz 
+    - sha256 checksum: d361af99362f3e6c55984e4aff127fffe9939e5c28274450f4b168b04d87370a
 - Archived:  
-There is no available archive snapshot at the moment.
-- Pruned:  
-https://opbnb-snapshot-mainnet.bnbchain.org/geth-prune-20240521.tar.gz 
-（Note that the pruned snapshot has erased state data before block height: 19598373)
-- PBSS:
-https://opbnb-snapshot-mainnet.bnbchain.org/geth-pbss-20240525.tar.gz 
+    - The full archived node status is too large(over 5.6 TB at the end of May, 2024). There is no available archive snapshot at the moment.
+    If you do need a full archived node, you have to sync the node from scratch.
+- Pruned Archived: (Note that the pruned snapshot has erased state data before block height: 19598373)
+    - url:  https://opbnb-snapshot-mainnet.bnbchain.org/geth-prune-20240521.tar.gz
+    - sha256 checksum: d361af99362f3e6c55984e4aff127fffe9939e5c28274450f4b168b04d87370a
+
 ### *Testnet*
+- Path-Base-State-Scheme(recommand):  
+    - url: https://opbnb-snapshot-testnet.bnbchain.org/geth-pbss-20240524.tar.gz
+    - sha256 checksum: 6e592e502b04bbe6a81bc14bcf18dde0dc33b714192f2a7ee5c7c73b67e17710
 - Archived:  
-https://opbnb-snapshot-testnet.bnbchain.org/geth-20240524.tar.gz
-- PBSS:  
-https://opbnb-snapshot-testnet.bnbchain.org/geth-pbss-20240524.tar.gz
+    - url: https://opbnb-snapshot-testnet.bnbchain.org/geth-20240524.tar.gz
+    - sha256 checksum: 114b5e5263e993e41fedcc9bff993b90c05f8f96294f64fb9d394b794ce5445a
 
+Additionally, you can get the latest snapshot url and sha256 checksum as below:
 
-> Snapshots are generated and retained on a weekly basis, with each snapshot being stored for a duration of 7 days. Community developer NodeReal is responsible for creating and updating the testnet snapshot regularly.
+```
+$ curl https://opbnb-snapshot-mainnet.bnbchain.org/geth-pbss-latest
+geth-pbss-20240525.tar.gz
+
+$ curl https://opbnb-snapshot-mainnet.bnbchain.org/geth-pbss-20240525.tar.gz.sha256
+d361af99362f3e6c55984e4aff127fffe9939e5c28274450f4b168b04d87370a  geth-pbss-20240525.tar.gz
+```
 
 ## Usage
 
 ### Step 1: Download the snapshot and decompress it.
 
 ```bash
-wget -q -O - https://tf-bnbchain-prod-opbnb-mainnet-snapshot-s3-ap-northeast-1.s3.ap-northeast-1.amazonaws.com/geth-20231012.tar.gz | tar -xvf -
+wget -q -O - https://opbnb-snapshot-mainnet.bnbchain.org/geth-pbss-20240525.tar.gz | tar -xvf -
 ```
 
 ### Step 2: Replace the data.
