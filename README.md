@@ -30,7 +30,6 @@ For more details about different node type and database scheme, please refer to 
     - url: https://opbnb-snapshot-testnet.bnbchain.org/geth-20240528.tar.gz
     - sha256 checksum: b30b1a41202810ac2a75a745c622ef1f1493fd2eeff166539536a929328d45fe
 
-
 Additionally, you can get the latest snapshot url and sha256 checksum as below:
 
 ```
