@@ -26,9 +26,8 @@ For more details about different node type and database scheme, please refer to 
 - Path-Base-State-Scheme(recommand):  
     - url: {{testnetPbss.url}}
     - sha256 checksum: {{testnetPbss.sha256}}
-- Archived:  
-    - url: {{testnet.url}}
-    - sha256 checksum: {{testnet.sha256}}
+- Archived:
+    - There is no available archive snapshot at the moment.
 
 Additionally, you can get the latest snapshot url and sha256 checksum as below:
 

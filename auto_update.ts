@@ -99,7 +99,7 @@ function getLatestSnapshotURL(
 
 async function main() {
   // const mainnetLatestSnapshotURL = await getLatestSnapshotURL("mainnet");
-  const testnetLatestSnapshotURL = await getLatestSnapshot("testnet");
+  // const testnetLatestSnapshotURL = await getLatestSnapshot("testnet");
   const testnetPbssLatestSnapshotURL = await getLatestSnapshot("testnet_pbss");
   const mainnetPbssLatestSnapshotURL = await getLatestSnapshot("mainnet_pbss");
   const mainnetPruneLatestSnapshotURL = await getLatestSnapshot(
@@ -108,7 +108,7 @@ async function main() {
   const data = {
     mainnetPrune: mainnetPruneLatestSnapshotURL,
     mainnetPbss: mainnetPbssLatestSnapshotURL,
-    testnet: testnetLatestSnapshotURL,
+    // testnet: testnetLatestSnapshotURL,
     testnetPbss: testnetPbssLatestSnapshotURL,
     updatedAt: new Date().toISOString(),
   };
