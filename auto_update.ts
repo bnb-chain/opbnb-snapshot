@@ -37,7 +37,7 @@ async function getLatestSnapshot(
   const date = new Date();
   let url = "";
   let found = false;
-  const days = 15;
+  const days = 7;
   for (let i = 0; i < days; i++) {
     url = getSnapshotURL(network, date);
     const resp = await fetch(url);
