@@ -24,8 +24,8 @@ For more details about different node type and database scheme, please refer to 
 
 ### *Testnet*
 - Path-Base-State-Scheme(recommand):  
-    - url: https://opbnb-snapshot-testnet.bnbchain.org/geth-pbss-20240705.tar.gz
-    - sha256 checksum: 054d6817614a175534eaf67172edb7f311f656b013cdeee4331a97f3732b5902
+    - url: https://opbnb-snapshot-testnet.bnbchain.org/geth-pbss-20240710.tar.gz
+    - sha256 checksum: eb817b9d7fd4ff3bbb4f72dbf7a557c31f2f5412229dad3b51798ccfc42f391b
 - Archived:
     - There is no available archive snapshot at the moment.
 
