@@ -61,3 +61,10 @@ wget -q -O - https://opbnb-snapshot-mainnet.bnbchain.org/geth-pbss-20240525.tar.
     mv ./geth/triecache ${OPGeth_DataDir}/geth/triecache
     ```
 4. Restart the `op-geth` client and verify the logs.
+
+### Note that: if you'd like to compress the date of your own node, please remove "nodekey" file and "nodes" folder under /geth folder.
+    ```
+    rm -rf geth/nodes
+    rm -rf geth/nodekey
+    tar -zcvf geth.tar.gz geth/
+    ```
