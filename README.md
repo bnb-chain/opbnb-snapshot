@@ -13,8 +13,8 @@ For more details about different node type and database scheme, please refer to 
 
 ### *Mainnet*
 - Path-Base-State-Scheme(recommand):
-    - url: https://opbnb-snapshot-mainnet.bnbchain.org/geth-pbss-20240719.tar.gz 
-    - sha256 checksum: d13fdc22c3f20101bddae5cef2ec5e3b695d129c6dbc2ae59d9b0c352d45bf9d
+    - url: https://opbnb-snapshot-mainnet.bnbchain.org/geth-pbss-20240723.tar.gz 
+    - sha256 checksum: 6b6c05e7e36e5534a8268f52cb285445602c995a7091f73c6c2a357dc1378558
 - Archived:  
     - The full archived node status is too large(over 5.6 TB at the end of May, 2024). There is no available archive snapshot at the moment.
     If you do need a full archived node, you have to sync the node from scratch.
