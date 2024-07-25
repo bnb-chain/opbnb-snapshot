@@ -62,9 +62,14 @@ wget -q -O - https://opbnb-snapshot-mainnet.bnbchain.org/geth-pbss-20240525.tar.
     ```
 4. Restart the `op-geth` client and verify the logs.
 
-### Note that: if you'd like to compress the date of your own node, please remove "nodekey" file and "nodes" folder under /geth folder.
-    ```
-    rm -rf geth/nodes
-    rm -rf geth/nodekey
-    tar -zcvf geth.tar.gz geth/
-    ```
+## Build Your Own Snapshot
+
+If you'd like to build your own snapshot, you can follow the steps below:
+
+```
+tar -zcvf geth.tar.gz geth/chaindata geth/triecache
+```
+
+The process may take considerable time, depending on the size of the data.
+
+**Reminder:** The `geth/nodekey` file is specific to each node. If you plan to create your own snapshot, make sure not to include this file, as it may lead to peer-to-peer (P2P) connectivity problems when using the snapshot.
