@@ -19,13 +19,13 @@ For more details about different node type and database scheme, please refer to 
     - The full archived node status is too large(over 5.6 TB at the end of May, 2024). There is no available archive snapshot at the moment.
     If you do need a full archived node, you have to sync the node from scratch.
 - Pruned Archived: (Note that the pruned snapshot has erased state data before block height: 19598373)
-    - url:  https://opbnb-snapshot-mainnet.bnbchain.org/geth-prune-20240719.tar.gz
-    - sha256 checksum: 06dc93b55da54910333d48f1a9dfd914ab3c627edf4a052ea250511f17d1539a
+    - url:  https://opbnb-snapshot-mainnet.bnbchain.org/geth-prune-20240723.tar.gz
+    - sha256 checksum: 817119be9a4275075a514638e530eb114555b4265609ea9ebe7bd7259c51a823
 
 ### *Testnet*
 - Path-Base-State-Scheme(recommand):  
-    - url: https://opbnb-snapshot-testnet.bnbchain.org/geth-pbss-20240719.tar.gz
-    - sha256 checksum: 71431bda58304a8bd5b35df6991544f2a6e1a9f9896bd6bc48733bd90e5c7912
+    - url: https://opbnb-snapshot-testnet.bnbchain.org/geth-pbss-20240724.tar.gz
+    - sha256 checksum: a6571caa4d433a0f0457bcfa3758db8a37a146b745b4bea090a957006aa46cfd
 - Archived:
     - There is no available archive snapshot at the moment.
 
@@ -61,3 +61,15 @@ wget -q -O - https://opbnb-snapshot-mainnet.bnbchain.org/geth-pbss-20240525.tar.
     mv ./geth/triecache ${OPGeth_DataDir}/geth/triecache
     ```
 4. Restart the `op-geth` client and verify the logs.
+
+## Build Your Own Snapshot
+
+If you would like to build your own snapshot, you can follow the steps below:
+
+```
+tar -zcvf geth.tar.gz geth/chaindata geth/triecache
+```
+
+The process may take considerable time, depending on the size of the data.
+
+**Reminder:** The `geth/nodekey` file is specific to each node. If you plan to create your own snapshot, make sure not to include this file, as it may lead to peer-to-peer (P2P) connectivity problems when using the snapshot.

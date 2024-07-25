@@ -64,7 +64,7 @@ wget -q -O - https://opbnb-snapshot-mainnet.bnbchain.org/geth-pbss-20240525.tar.
 
 ## Build Your Own Snapshot
 
-If you'd like to build your own snapshot, you can follow the steps below:
+If you would like to build your own snapshot, you can follow the steps below:
 
 ```
 tar -zcvf geth.tar.gz geth/chaindata geth/triecache
