@@ -11,6 +11,16 @@ It is advisable to utilize the path-based state scheme snapshot for quicker sync
 
 For more details about different node type and database scheme, please refer to the [official documentation](https://docs.bnbchain.org/opbnb-docs/docs/tutorials/run-nodes-best-practices/).
 
+**Note**
+
+In the current version of the pbss snapshot,
+if the op-node is started with EL (Execution Layer) sync enabled,
+there may be an issue where the initialization state becomes inconsistent,
+causing block synchronization to fail. To work around this,
+disable EL sync by removing the `syncmode = execution-layer` configuration in op-node config.
+This issue will be fixed in the next release.
+
+
 ### *Mainnet*
 - Path-Base-State-Scheme(recommand):
     - url: {{mainnetPbss.url}} 
