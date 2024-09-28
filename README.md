@@ -23,8 +23,8 @@ This issue will be fixed in the next release.
 
 ### *Mainnet*
 - Path-Base-State-Scheme(recommand):
-    - url: https://opbnb-snapshot-mainnet.bnbchain.org/geth-pbss-20240924.tar.gz 
-    - sha256 checksum: d218f4f72ac548259dccc279e500352a20c4f2969e91cebddcad4b2d3db5a5b3
+    - url: https://opbnb-snapshot-mainnet.bnbchain.org/geth-pbss-20240927.tar.gz 
+    - sha256 checksum: ddd9a5718bba84725d79d06f4bdc7ef2bd5869f0203bc04fa77cdfdfc57acd5b
 - Archived:  
     - The full archived node status is too large(over 5.6 TB at the end of May, 2024). There is no available archive snapshot at the moment.
     If you do need a full archived node, you have to sync the node from scratch.
@@ -34,8 +34,8 @@ This issue will be fixed in the next release.
 
 ### *Testnet*
 - Path-Base-State-Scheme(recommand):  
-    - url: https://opbnb-snapshot-testnet.bnbchain.org/geth-pbss-20240925.tar.gz
-    - sha256 checksum: af33093e803d2097b769da34bd55a41e0940d1045f89cf708ba636a111c3f167
+    - url: https://opbnb-snapshot-testnet.bnbchain.org/geth-pbss-20240927.tar.gz
+    - sha256 checksum: 76b9574c8869551c3837a04a3e89c967f2f8d3c68e0287c20f2217da091e9677
 - Archived:
     - There is no available archive snapshot at the moment.
 
