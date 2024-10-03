@@ -34,8 +34,8 @@ This issue will be fixed in the next release.
 
 ### *Testnet*
 - Path-Base-State-Scheme(recommand):  
-    - url: https://opbnb-snapshot-testnet.bnbchain.org/geth-pbss-20240927.tar.gz
-    - sha256 checksum: 76b9574c8869551c3837a04a3e89c967f2f8d3c68e0287c20f2217da091e9677
+    - url: https://opbnb-snapshot-testnet.bnbchain.org/geth-pbss-20241002.tar.gz
+    - sha256 checksum: 7f1c329165d1d36fb37289037dd8f73d69faecacd1bf04e7c8649163b7fa36c8
 - Archived:
     - There is no available archive snapshot at the moment.
 
