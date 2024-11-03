@@ -29,8 +29,8 @@ This issue will be fixed in the next release.
     - The full archived node status is too large(over 5.6 TB at the end of May, 2024). There is no available archive snapshot at the moment.
     If you do need a full archived node, you have to sync the node from scratch.
 - Pruned Archived: (Note that the pruned snapshot has erased state data before block height: 19598373)
-    - url:  https://opbnb-snapshot-mainnet.bnbchain.org/geth-prune-20241028.tar.gz
-    - sha256 checksum: 44162b9ef2bf35af4d9e7b45e72435d11f4b1736b7573ea07e8501d0e4960baa
+    - url:  https://opbnb-snapshot-mainnet.bnbchain.org/geth-prune-20241101.tar.gz
+    - sha256 checksum: 75816a934bf33cf1f493c6f899f5a78b1492c4c86abb7ae6071c406821c50d34
 
 ### *Testnet*
 - Path-Base-State-Scheme(recommand):  
