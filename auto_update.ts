@@ -1,6 +1,4 @@
 import Template from "https://deno.land/x/template@v0.1.0/mod.ts";
-// const Template = require('https://deno.land/x/template@v0.1.0/mod.ts');
-
 
 // date format: YYYYMMDD, e.g. 20231102
 function getSnapshotURL(
