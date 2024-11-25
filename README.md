@@ -42,11 +42,11 @@ This issue will be fixed in the next release.
 Additionally, you can get the latest snapshot url and sha256 checksum as below:
 
 ```
-$ curl https://opbnb-snapshot-mainnet.bnbchain.org/geth-pbss-latest
-geth-pbss-20240525.tar.gz
+$ curl https://pub-2ea2209b4ee74f4398c5ac50c3b2efeb.r2.dev/geth-mainnet-pbss-latest
+geth-mainnet-pbss-20241122.tar.gz
 
-$ curl https://opbnb-snapshot-mainnet.bnbchain.org/geth-pbss-20240525.tar.gz.sha256
-d361af99362f3e6c55984e4aff127fffe9939e5c28274450f4b168b04d87370a  geth-pbss-20240525.tar.gz
+$ curl https://pub-2ea2209b4ee74f4398c5ac50c3b2efeb.r2.dev/geth-mainnet-pbss-20241122.tar.gz.sha256
+d361af99362f3e6c55984e4aff127fffe9939e5c28274450f4b168b04d87370a  geth-mainnet-pbss-20241122.tar.gz
 ```
 
 ## Usage
@@ -54,7 +54,7 @@ d361af99362f3e6c55984e4aff127fffe9939e5c28274450f4b168b04d87370a  geth-pbss-2024
 ### Step 1: Download the snapshot and decompress it.
 
 ```bash
-wget -q -O - https://opbnb-snapshot-mainnet.bnbchain.org/geth-pbss-20240525.tar.gz | tar -xvf -
+wget -q -O - https://pub-2ea2209b4ee74f4398c5ac50c3b2efeb.r2.dev/geth-pbss-20241122.tar.gz | tar -xvf -
 ```
 
 ### Step 2: Replace the data.
