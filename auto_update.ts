@@ -12,15 +12,15 @@ function getSnapshotURL(
 ): string {
   const dateString = date.toISOString().substr(0, 10).replace(/-/g, "");
   if (network === "mainnet") {
-    return `https://opbnb-snapshot-mainnet.bnbchain.org/geth-${dateString}.tar.gz`;
+    return `https://pub-2ea2209b4ee74f4398c5ac50c3b2efeb.r2.dev/geth-mainnet-${dateString}.tar.gz`;
   } else if (network === "mainnet_prune") {
-    return `https://opbnb-snapshot-mainnet.bnbchain.org/geth-prune-${dateString}.tar.gz`;
+    return `https://pub-2ea2209b4ee74f4398c5ac50c3b2efeb.r2.dev/geth-mainnet-prune-${dateString}.tar.gz`;
   } else if (network === "mainnet_pbss") {
-    return `https://opbnb-snapshot-mainnet.bnbchain.org/geth-pbss-${dateString}.tar.gz`;
+    return `https://pub-2ea2209b4ee74f4398c5ac50c3b2efeb.r2.dev/geth-mainnet-pbss-${dateString}.tar.gz`;
   } else if (network === "testnet_pbss") {
-    return `https://opbnb-snapshot-testnet.bnbchain.org/geth-pbss-${dateString}.tar.gz`;
+    return `https://pub-2ea2209b4ee74f4398c5ac50c3b2efeb.r2.dev/geth-testnet-pbss-${dateString}.tar.gz`;
   } else if (network === "testnet") {
-    return `https://opbnb-snapshot-testnet.bnbchain.org/geth-${dateString}.tar.gz`;
+    return `https://pub-2ea2209b4ee74f4398c5ac50c3b2efeb.r2.dev/geth-testnet-${dateString}.tar.gz`;
   } else {
     throw new Error("invalid network");
   }
@@ -83,15 +83,15 @@ function getLatestSnapshotURL(
     | "testnet_pbss"
 ) {
   if (network === "mainnet") {
-    return `https://opbnb-snapshot-mainnet.bnbchain.org/geth-latest`;
+    return `https://pub-2ea2209b4ee74f4398c5ac50c3b2efeb.r2.dev/geth-mainnet-latest`;
   } else if (network === "mainnet_prune") {
-    return `https://opbnb-snapshot-mainnet.bnbchain.org/geth-prune-latest`;
+    return `https://pub-2ea2209b4ee74f4398c5ac50c3b2efeb.r2.dev/geth-mainnet-prune-latest`;
   } else if (network === "mainnet_pbss") {
-    return `https://opbnb-snapshot-mainnet.bnbchain.org/geth-pbss-latest`;
+    return `https://pub-2ea2209b4ee74f4398c5ac50c3b2efeb.r2.dev/geth-mainnet-pbss-latest`;
   } else if (network === "testnet_pbss") {
-    return `https://opbnb-snapshot-testnet.bnbchain.org/geth-pbss-latest`;
+    return `https://pub-2ea2209b4ee74f4398c5ac50c3b2efeb.r2.dev/geth-testnet-pbss-latest`;
   } else if (network === "testnet") {
-    return `https://opbnb-snapshot-testnet.bnbchain.org/geth-latest`;
+    return `https://pub-2ea2209b4ee74f4398c5ac50c3b2efeb.r2.dev/geth-testnet-latest`;
   } else {
     throw new Error("invalid network");
   }
