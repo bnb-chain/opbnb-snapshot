@@ -23,30 +23,30 @@ This issue will be fixed in the next release.
 
 ### *Mainnet*
 - Path-Base-State-Scheme(recommand):
-    - url: https://opbnb-snapshot-mainnet.bnbchain.org/geth-pbss-20241122.tar.gz 
-    - sha256 checksum: e1cf8b3eb3959d07c9819be30f72d730191d04ac6e540a9e75f5785c23cd530b
+    - url: https://pub-2ea2209b4ee74f4398c5ac50c3b2efeb.r2.dev/geth-mainnet-pbss-20241125.tar.gz 
+    - sha256 checksum: 7276de8eca62a3de0421f13271584ef632983d2af1f407e9995daa9a9692d107
 - Archived:  
     - The full archived node status is too large(over 5.6 TB at the end of May, 2024). There is no available archive snapshot at the moment.
     If you do need a full archived node, you have to sync the node from scratch.
 - Pruned Archived: (Note that the pruned snapshot has erased state data before block height: 19598373)
-    - url:  https://opbnb-snapshot-mainnet.bnbchain.org/geth-prune-20241122.tar.gz
-    - sha256 checksum: 34d99b8c6fd30c6d7fef5340799a97cbcaaf40ee04d84c2fe16a39356928f7f2
+    - url:  https://pub-2ea2209b4ee74f4398c5ac50c3b2efeb.r2.dev/geth-mainnet-prune-20241121.tar.gz
+    - sha256 checksum: 915e3a5faa4e9093010a13059c033d0f8e55a13fa470ac026eb2b4772685b08f
 
 ### *Testnet*
 - Path-Base-State-Scheme(recommand):  
-    - url: https://opbnb-snapshot-testnet.bnbchain.org/geth-pbss-20241122.tar.gz
-    - sha256 checksum: 643e7238a310687824c547c91e5b1b2b3e71adf787dc09f57cfc46d9226c72bd
+    - url: https://pub-2ea2209b4ee74f4398c5ac50c3b2efeb.r2.dev/geth-testnet-pbss-20241122.tar.gz
+    - sha256 checksum: effdf44bcb0e0d565c2a3bfd249d9677e23e2a49a6052f6c3b2a6eeeaac378eb
 - Archived:
     - There is no available archive snapshot at the moment.
 
 Additionally, you can get the latest snapshot url and sha256 checksum as below:
 
 ```
-$ curl https://pub-2ea2209b4ee74f4398c5ac50c3b2efeb.r2.dev/geth-mainnet-pbss-latest
-geth-mainnet-pbss-20241122.tar.gz
+$ curl https://opbnb-snapshot-mainnet.bnbchain.org/geth-pbss-latest
+geth-pbss-20240525.tar.gz
 
-$ curl https://pub-2ea2209b4ee74f4398c5ac50c3b2efeb.r2.dev/geth-mainnet-pbss-20241122.tar.gz.sha256
-d361af99362f3e6c55984e4aff127fffe9939e5c28274450f4b168b04d87370a  geth-mainnet-pbss-20241122.tar.gz
+$ curl https://opbnb-snapshot-mainnet.bnbchain.org/geth-pbss-20240525.tar.gz.sha256
+d361af99362f3e6c55984e4aff127fffe9939e5c28274450f4b168b04d87370a  geth-pbss-20240525.tar.gz
 ```
 
 ## Usage
@@ -54,7 +54,7 @@ d361af99362f3e6c55984e4aff127fffe9939e5c28274450f4b168b04d87370a  geth-mainnet-p
 ### Step 1: Download the snapshot and decompress it.
 
 ```bash
-wget -q -O - https://pub-2ea2209b4ee74f4398c5ac50c3b2efeb.r2.dev/geth-pbss-20241122.tar.gz | tar -xvf -
+wget -q -O - https://opbnb-snapshot-mainnet.bnbchain.org/geth-pbss-20240525.tar.gz | tar -xvf -
 ```
 
 ### Step 2: Replace the data.
