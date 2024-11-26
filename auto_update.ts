@@ -1,5 +1,7 @@
 import Template from "https://deno.land/x/template@v0.1.0/mod.ts";
 
+const baseURL = "https://pub-2ea2209b4ee74f4398c5ac50c3b2efeb.r2.dev";
+
 // date format: YYYYMMDD, e.g. 20231102
 function getSnapshotURL(
   network:
@@ -12,15 +14,15 @@ function getSnapshotURL(
 ): string {
   const dateString = date.toISOString().substr(0, 10).replace(/-/g, "");
   if (network === "mainnet") {
-    return `https://pub-2ea2209b4ee74f4398c5ac50c3b2efeb.r2.dev/geth-mainnet-${dateString}.tar.gz`;
+    return `${baseURL}/geth-mainnet-${dateString}.tar.gz`;
   } else if (network === "mainnet_prune") {
-    return `https://pub-2ea2209b4ee74f4398c5ac50c3b2efeb.r2.dev/geth-mainnet-prune-${dateString}.tar.gz`;
+    return `${baseURL}/geth-mainnet-prune-${dateString}.tar.gz`;
   } else if (network === "mainnet_pbss") {
-    return `https://pub-2ea2209b4ee74f4398c5ac50c3b2efeb.r2.dev/geth-mainnet-pbss-${dateString}.tar.gz`;
+    return `${baseURL}/geth-mainnet-pbss-${dateString}.tar.gz`;
   } else if (network === "testnet_pbss") {
-    return `https://pub-2ea2209b4ee74f4398c5ac50c3b2efeb.r2.dev/geth-testnet-pbss-${dateString}.tar.gz`;
+    return `${baseURL}/geth-testnet-pbss-${dateString}.tar.gz`;
   } else if (network === "testnet") {
-    return `https://pub-2ea2209b4ee74f4398c5ac50c3b2efeb.r2.dev/geth-testnet-${dateString}.tar.gz`;
+    return `${baseURL}/geth-testnet-${dateString}.tar.gz`;
   } else {
     throw new Error("invalid network");
   }
@@ -83,15 +85,15 @@ function getLatestSnapshotURL(
     | "testnet_pbss"
 ) {
   if (network === "mainnet") {
-    return `https://pub-2ea2209b4ee74f4398c5ac50c3b2efeb.r2.dev/geth-mainnet-latest`;
+    return `${baseURL}/geth-mainnet-latest`;
   } else if (network === "mainnet_prune") {
-    return `https://pub-2ea2209b4ee74f4398c5ac50c3b2efeb.r2.dev/geth-mainnet-prune-latest`;
+    return `${baseURL}/geth-mainnet-prune-latest`;
   } else if (network === "mainnet_pbss") {
-    return `https://pub-2ea2209b4ee74f4398c5ac50c3b2efeb.r2.dev/geth-mainnet-pbss-latest`;
+    return `${baseURL}/geth-mainnet-pbss-latest`;
   } else if (network === "testnet_pbss") {
-    return `https://pub-2ea2209b4ee74f4398c5ac50c3b2efeb.r2.dev/geth-testnet-pbss-latest`;
+    return `${baseURL}/geth-testnet-pbss-latest`;
   } else if (network === "testnet") {
-    return `https://pub-2ea2209b4ee74f4398c5ac50c3b2efeb.r2.dev/geth-testnet-latest`;
+    return `${baseURL}/geth-testnet-latest`;
   } else {
     throw new Error("invalid network");
   }
@@ -110,6 +112,7 @@ async function main() {
     mainnetPbss: mainnetPbssLatestSnapshotURL,
     // testnet: testnetLatestSnapshotURL,
     testnetPbss: testnetPbssLatestSnapshotURL,
+    baseURL,
     updatedAt: new Date().toISOString(),
   };
   console.log(data);

@@ -42,10 +42,10 @@ This issue will be fixed in the next release.
 Additionally, you can get the latest snapshot url and sha256 checksum as below:
 
 ```
-$ curl https://opbnb-snapshot-mainnet.bnbchain.org/geth-pbss-latest
+$ curl {{baseURL}}/geth-pbss-latest
 geth-pbss-20240525.tar.gz
 
-$ curl https://opbnb-snapshot-mainnet.bnbchain.org/geth-pbss-20240525.tar.gz.sha256
+$ curl {{baseURL}}/geth-pbss-20240525.tar.gz.sha256
 d361af99362f3e6c55984e4aff127fffe9939e5c28274450f4b168b04d87370a  geth-pbss-20240525.tar.gz
 ```
 
@@ -54,7 +54,7 @@ d361af99362f3e6c55984e4aff127fffe9939e5c28274450f4b168b04d87370a  geth-pbss-2024
 ### Step 1: Download the snapshot and decompress it.
 
 ```bash
-wget -q -O - https://opbnb-snapshot-mainnet.bnbchain.org/geth-pbss-20240525.tar.gz | tar -xvf -
+wget -q -O - {{mainnetPbss.url}} | tar -xvf -
 ```
 
 ### Step 2: Replace the data.
