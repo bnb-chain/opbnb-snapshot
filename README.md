@@ -23,19 +23,19 @@ This issue will be fixed in the next release.
 
 ### *Mainnet*
 - Path-Base-State-Scheme(recommand):
-    - url: https://pub-2ea2209b4ee74f4398c5ac50c3b2efeb.r2.dev/geth-mainnet-pbss-20241125.tar.gz 
-    - sha256 checksum: 7276de8eca62a3de0421f13271584ef632983d2af1f407e9995daa9a9692d107
+    - url: https://pub-2ea2209b4ee74f4398c5ac50c3b2efeb.r2.dev/geth-mainnet-pbss-20241129.tar.gz 
+    - sha256 checksum: bd15cf80e0203079e0fb4b1cd04f2f1a1463533408081f37db7b190e7b1b9074
 - Archived:  
     - The full archived node status is too large(over 5.6 TB at the end of May, 2024). There is no available archive snapshot at the moment.
     If you do need a full archived node, you have to sync the node from scratch.
 - Pruned Archived: (Note that the pruned snapshot has erased state data before block height: 19598373)
-    - url:  https://pub-2ea2209b4ee74f4398c5ac50c3b2efeb.r2.dev/geth-mainnet-prune-20241121.tar.gz
-    - sha256 checksum: 915e3a5faa4e9093010a13059c033d0f8e55a13fa470ac026eb2b4772685b08f
+    - url:  https://pub-2ea2209b4ee74f4398c5ac50c3b2efeb.r2.dev/geth-mainnet-prune-20241128.tar.gz
+    - sha256 checksum: 3151b610b4f2358996b5201ad4cb355ca12d8d4692032df5ea92397ffdf9031f
 
 ### *Testnet*
 - Path-Base-State-Scheme(recommand):  
-    - url: https://pub-2ea2209b4ee74f4398c5ac50c3b2efeb.r2.dev/geth-testnet-pbss-20241126.tar.gz
-    - sha256 checksum: 6505399b4b04127390e4cfe195796503324d3f17f08d74efdb07ab8bc9d4e0c8
+    - url: https://pub-2ea2209b4ee74f4398c5ac50c3b2efeb.r2.dev/geth-testnet-pbss-20241129.tar.gz
+    - sha256 checksum: b277ccd79685e52c8377167a2c9c30eb9d525f4aebc8ee321d8207ec7608593f
 - Archived:
     - There is no available archive snapshot at the moment.
 
@@ -54,7 +54,7 @@ d361af99362f3e6c55984e4aff127fffe9939e5c28274450f4b168b04d87370a  geth-pbss-2024
 ### Step 1: Download the snapshot and decompress it.
 
 ```bash
-wget -q -O - https://pub-2ea2209b4ee74f4398c5ac50c3b2efeb.r2.dev/geth-mainnet-pbss-20241125.tar.gz | tar -xvf -
+wget -q -O - https://pub-2ea2209b4ee74f4398c5ac50c3b2efeb.r2.dev/geth-mainnet-pbss-20241129.tar.gz | tar -xvf -
 ```
 
 ### Step 2: Replace the data.
