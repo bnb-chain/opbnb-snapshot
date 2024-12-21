@@ -23,19 +23,20 @@ This issue will be fixed in the next release.
 
 ### *Mainnet*
 - Path-Base-State-Scheme(recommand):
-    - url: https://pub-2ea2209b4ee74f4398c5ac50c3b2efeb.r2.dev/geth-mainnet-pbss-20241216.tar.gz 
-    - sha256 checksum: 4b402e1093c2d672a0edf678151167c5e98edc31eb0052e4ae2548d43af4da06
+    - url: https://pub-2ea2209b4ee74f4398c5ac50c3b2efeb.r2.dev/geth-mainnet-pbss-20241220.tar.gz 
+    - sha256 checksum: d232eafc65af629a1a3360bcdf120e0065e8b4fed470568eb7d80ac04e15ef58
 - Archived:  
     - The full archived node status is too large(over 5.6 TB at the end of May, 2024). There is no available archive snapshot at the moment.
     If you do need a full archived node, you have to sync the node from scratch.
 - Pruned Archived: (Note that the pruned snapshot has erased state data before block height: 19598373)
-    - url:  https://pub-2ea2209b4ee74f4398c5ac50c3b2efeb.r2.dev/geth-mainnet-prune-20241205.tar.gz
-    - sha256 checksum: 91956474cff7d10898e6cf67ce0607d7cd455d80ea99f288e1fcb42aa29ba40b
+    - url:  https://pub-2ea2209b4ee74f4398c5ac50c3b2efeb.r2.dev/geth-mainnet-prune-20241220.tar.gz
+    - sha256 checksum: 
+
 
 ### *Testnet*
 - Path-Base-State-Scheme(recommand):  
-    - url: https://pub-2ea2209b4ee74f4398c5ac50c3b2efeb.r2.dev/geth-testnet-pbss-20241217.tar.gz
-    - sha256 checksum: efa5ecbb125b4590e603d5d248433c88cb79377d0cd2da2173968b0c7bf224b2
+    - url: https://pub-2ea2209b4ee74f4398c5ac50c3b2efeb.r2.dev/geth-testnet-pbss-20241220.tar.gz
+    - sha256 checksum: 101b5823db3484e7231a0af3c81a38c2699256694e9d060165d832efeb6880c7
 - Archived:
     - There is no available archive snapshot at the moment.
 
@@ -54,7 +55,7 @@ d361af99362f3e6c55984e4aff127fffe9939e5c28274450f4b168b04d87370a  geth-pbss-2024
 ### Step 1: Download the snapshot and decompress it.
 
 ```bash
-wget -q -O - https://pub-2ea2209b4ee74f4398c5ac50c3b2efeb.r2.dev/geth-mainnet-pbss-20241209.tar.gz | tar -xvf -
+wget -q -O - https://pub-2ea2209b4ee74f4398c5ac50c3b2efeb.r2.dev/geth-mainnet-pbss-20241220.tar.gz | tar -xvf -
 ```
 
 ### Step 2: Replace the data.
