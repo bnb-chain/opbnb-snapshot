@@ -23,8 +23,8 @@ This issue will be fixed in the next release.
 
 ### *Mainnet*
 - Path-Base-State-Scheme(recommand):
-    - url: https://pub-2ea2209b4ee74f4398c5ac50c3b2efeb.r2.dev/geth-mainnet-pbss-20241230.tar.gz 
-    - sha256 checksum: 90a427abe7736e6da685c571edf35ae314cedca7eaba6992201626cf98de34c8
+    - url: https://pub-2ea2209b4ee74f4398c5ac50c3b2efeb.r2.dev/geth-mainnet-pbss-20250103.tar.gz 
+    - sha256 checksum: e96e0be993284feead22ffe9928d15d69a0ec7285a2f9e2172d40452b4fe5619
 - Archived:  
     - The full archived node status is too large(over 5.6 TB at the end of May, 2024). There is no available archive snapshot at the moment.
     If you do need a full archived node, you have to sync the node from scratch.
@@ -35,8 +35,8 @@ This issue will be fixed in the next release.
 
 ### *Testnet*
 - Path-Base-State-Scheme(recommand):  
-    - url: https://pub-2ea2209b4ee74f4398c5ac50c3b2efeb.r2.dev/geth-testnet-pbss-20241231.tar.gz
-    - sha256 checksum: b57a20614ffac1a4db455f9f958b316eee4630243e3c895b9e9876e308f12cd9
+    - url: https://pub-2ea2209b4ee74f4398c5ac50c3b2efeb.r2.dev/geth-testnet-pbss-20250103.tar.gz
+    - sha256 checksum: 790f53f1981602575c1c9cfdff7bab9784fd841280fe71085af3905e274ef773
 - Archived:
     - There is no available archive snapshot at the moment.
 
@@ -55,7 +55,7 @@ d361af99362f3e6c55984e4aff127fffe9939e5c28274450f4b168b04d87370a  geth-pbss-2024
 ### Step 1: Download the snapshot and decompress it.
 
 ```bash
-wget -q -O - https://pub-2ea2209b4ee74f4398c5ac50c3b2efeb.r2.dev/geth-mainnet-pbss-20241230.tar.gz | tar -xvf -
+wget -q -O - https://pub-2ea2209b4ee74f4398c5ac50c3b2efeb.r2.dev/geth-mainnet-pbss-20250103.tar.gz | tar -xvf -
 ```
 
 ### Step 2: Replace the data.
