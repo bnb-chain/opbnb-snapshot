@@ -35,8 +35,8 @@ This issue will be fixed in the next release.
 
 ### *Testnet*
 - Path-Base-State-Scheme(recommand):  
-    - url: https://pub-2ea2209b4ee74f4398c5ac50c3b2efeb.r2.dev/geth-testnet-pbss-20250325.tar.gz
-    - sha256 checksum: 648b3f99bc4f4dc4dd9535ea25edf5256fa6b243f2cd0d78762c7d57b05e5f80
+    - url: https://pub-2ea2209b4ee74f4398c5ac50c3b2efeb.r2.dev/geth-testnet-pbss-20250328.tar.gz
+    - sha256 checksum: 0bddeba34616c4ed3ddc69917a436c43328732943d8b402b946ebf12d7ba3950
 - Archived:
     - There is no available archive snapshot at the moment.
 
