@@ -28,9 +28,6 @@ This issue will be fixed in the next release.
 - Archived:  
     - The full archived node status is too large(over 5.6 TB at the end of May, 2024). There is no available archive snapshot at the moment.
     If you do need a full archived node, you have to sync the node from scratch.
-- Pruned Archived: (Note that the pruned snapshot has erased state data before block height: 19598373)
-    - url:  {{mainnetPrune.url}}
-    - sha256 checksum: {{mainnetPrune.sha256}}
 
 ### *Testnet*
 - Path-Base-State-Scheme(recommand):  
