@@ -39,7 +39,7 @@ async function getLatestSnapshot(
   const date = new Date();
   let url = "";
   let found = false;
-  const days = 7;
+  const days = 30;
   for (let i = 0; i < days; i++) {
     url = getSnapshotURL(network, date);
     const resp = await fetch(url);
@@ -100,13 +100,28 @@ function getLatestSnapshotURL(
 }
 
 async function main() {
-  // const mainnetLatestSnapshotURL = await getLatestSnapshotURL("mainnet");
-  // const testnetLatestSnapshotURL = await getLatestSnapshot("testnet");
-  const testnetPbssLatestSnapshotURL = await getLatestSnapshot("testnet_pbss");
-  const mainnetPbssLatestSnapshotURL = await getLatestSnapshot("mainnet_pbss");
-  const mainnetPruneLatestSnapshotURL = await getLatestSnapshot(
-    "mainnet_prune"
-  );
+  let testnetPbssLatestSnapshotURL, mainnetPbssLatestSnapshotURL, mainnetPruneLatestSnapshotURL;
+  
+  try {
+    testnetPbssLatestSnapshotURL = await getLatestSnapshot("testnet_pbss");
+  } catch (e) {
+    console.error("Failed to get testnet_pbss snapshot:", e);
+    testnetPbssLatestSnapshotURL = null;
+  }
+  
+  try {
+    mainnetPbssLatestSnapshotURL = await getLatestSnapshot("mainnet_pbss");
+  } catch (e) {
+    console.error("Failed to get mainnet_pbss snapshot:", e);
+    mainnetPbssLatestSnapshotURL = null;
+  }
+  
+  try {
+    mainnetPruneLatestSnapshotURL = await getLatestSnapshot("mainnet_prune");
+  } catch (e) {
+    console.error("Failed to get mainnet_prune snapshot:", e);
+    mainnetPruneLatestSnapshotURL = null;
+  }
   const data = {
     mainnetPrune: mainnetPruneLatestSnapshotURL,
     mainnetPbss: mainnetPbssLatestSnapshotURL,
