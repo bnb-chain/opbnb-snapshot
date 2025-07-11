@@ -106,21 +106,21 @@ async function main() {
     testnetPbssLatestSnapshotURL = await getLatestSnapshot("testnet_pbss");
   } catch (e) {
     console.error("Failed to get testnet_pbss snapshot:", e);
-    testnetPbssLatestSnapshotURL = null;
+    testnetPbssLatestSnapshotURL = "";
   }
   
   try {
     mainnetPbssLatestSnapshotURL = await getLatestSnapshot("mainnet_pbss");
   } catch (e) {
     console.error("Failed to get mainnet_pbss snapshot:", e);
-    mainnetPbssLatestSnapshotURL = null;
+    mainnetPbssLatestSnapshotURL = "";
   }
   
   try {
     mainnetPruneLatestSnapshotURL = await getLatestSnapshot("mainnet_prune");
   } catch (e) {
     console.error("Failed to get mainnet_prune snapshot:", e);
-    mainnetPruneLatestSnapshotURL = null;
+    mainnetPruneLatestSnapshotURL = "";
   }
   const data = {
     mainnetPrune: mainnetPruneLatestSnapshotURL,
