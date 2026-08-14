@@ -11,12 +11,20 @@ on:
 jobs:
   auto_update:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
       - uses: denoland/setup-deno@v1
         with:
-          deno-version: v1.x   
-      - run: deno run -A auto_update.ts
+          deno-version: v1.x
+      - run: deno test auto_update_test.ts
+      - run: >-
+          deno run
+          --allow-net=pub-2ea2209b4ee74f4398c5ac50c3b2efeb.r2.dev
+          --allow-read=README.md.template
+          --allow-write=README.md
+          auto_update.ts
       - uses: stefanzweifel/git-auto-commit-action@v5
