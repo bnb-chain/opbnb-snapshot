@@ -48,10 +48,15 @@ d361af99362f3e6c55984e4aff127fffe9939e5c28274450f4b168b04d87370a  geth-pbss-2024
 
 ## Usage
 
-### Step 1: Download the snapshot and decompress it.
+### Step 1: Download and verify the snapshot, then decompress it.
 
 ```bash
-wget -q -O - {{mainnetPbss.url}} | tar -xvf -
+snapshot_url="{{mainnetPbss.url}}"
+snapshot_file="${snapshot_url##*/}"
+
+wget "$snapshot_url" -O "$snapshot_file"
+echo "{{mainnetPbss.sha256}}  $snapshot_file" | sha256sum --check -
+tar --no-same-owner -xvf "$snapshot_file"
 ```
 
 ### Step 2: Replace the data.

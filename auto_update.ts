@@ -1,6 +1,23 @@
-import Template from "https://deno.land/x/template@v0.1.0/mod.ts";
-
 const baseURL = "https://pub-2ea2209b4ee74f4398c5ac50c3b2efeb.r2.dev";
+
+export function renderTemplate(
+  template: string,
+  values: Record<string, unknown>,
+): string {
+  return template.replace(
+    /\{\{\s*([\w.]+)\s*\}\}/g,
+    (_match, path: string) => {
+      let value: unknown = values;
+      for (const key of path.split(".")) {
+        if (typeof value !== "object" || value === null || !(key in value)) {
+          return "";
+        }
+        value = (value as Record<string, unknown>)[key];
+      }
+      return value === null || value === undefined ? "" : String(value);
+    },
+  );
+}
 
 // date format: YYYYMMDD, e.g. 20231102
 function getSnapshotURL(
@@ -10,7 +27,7 @@ function getSnapshotURL(
     | "mainnet_pbss"
     | "testnet"
     | "testnet_pbss",
-  date: Date
+  date: Date,
 ): string {
   const dateString = date.toISOString().substr(0, 10).replace(/-/g, "");
   if (network === "mainnet") {
@@ -34,7 +51,7 @@ async function getLatestSnapshot(
     | "mainnet_prune"
     | "mainnet_pbss"
     | "testnet"
-    | "testnet_pbss"
+    | "testnet_pbss",
 ) {
   const date = new Date();
   let url = "";
@@ -60,7 +77,7 @@ async function getLatestSnapshot(
   const urlPostfix = url.split("/").pop();
   if (content !== urlPostfix) {
     throw new Error(
-      `latest snapshot url is not the latest, latest: ${content}, expected: ${urlPostfix}`
+      `latest snapshot url is not the latest, latest: ${content}, expected: ${urlPostfix}`,
     );
   }
   // check sha256 checksum
@@ -82,7 +99,7 @@ function getLatestSnapshotURL(
     | "mainnet_prune"
     | "mainnet_pbss"
     | "testnet"
-    | "testnet_pbss"
+    | "testnet_pbss",
 ) {
   if (network === "mainnet") {
     return `${baseURL}/geth-mainnet-latest`;
@@ -100,22 +117,24 @@ function getLatestSnapshotURL(
 }
 
 async function main() {
-  let testnetPbssLatestSnapshotURL, mainnetPbssLatestSnapshotURL, mainnetPruneLatestSnapshotURL;
-  
+  let testnetPbssLatestSnapshotURL,
+    mainnetPbssLatestSnapshotURL,
+    mainnetPruneLatestSnapshotURL;
+
   try {
     testnetPbssLatestSnapshotURL = await getLatestSnapshot("testnet_pbss");
   } catch (e) {
     console.error("Failed to get testnet_pbss snapshot:", e);
     testnetPbssLatestSnapshotURL = "";
   }
-  
+
   try {
     mainnetPbssLatestSnapshotURL = await getLatestSnapshot("mainnet_pbss");
   } catch (e) {
     console.error("Failed to get mainnet_pbss snapshot:", e);
     mainnetPbssLatestSnapshotURL = "";
   }
-  
+
   try {
     mainnetPruneLatestSnapshotURL = await getLatestSnapshot("mainnet_prune");
   } catch (e) {
@@ -131,11 +150,12 @@ async function main() {
     updatedAt: new Date().toISOString(),
   };
   console.log(data);
-  // Render a template
-  const tpl = new Template();
-  const result = await tpl.renderFile("./README.md.template", data);
+  const template = await Deno.readTextFile("./README.md.template");
+  const result = renderTemplate(template, data);
   console.log(result);
   await Deno.writeTextFile("./README.md", result);
 }
 
-await main();
+if (import.meta.main) {
+  await main();
+}
